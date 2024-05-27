@@ -13,13 +13,13 @@
                 <div class="ps-4"><strong>23k</strong> followers</div>
                 <div class="ps-4"><strong>212</strong> following</div>
             </div>
-            <div class="pt-4 font-wight-bold"><h4>Vistagram.org</h4></div>
+            <div class="pt-4 font-wight-bold"><h4>{{ $user->profile->title }}</h4></div>
             <div>
-                <p>
-                    Vistagram is an innovative photo company that has made a significant mark in the digital photography landscape. Specializing in providing top-notch photographic services and products.
+                <p> 
+                    {{ $user->profile->description}}
                 </p>
             </div>
-            <div><a href="#">www.vistagram.org</a></div>
+            <div><a href="#">{{ $user->profile->url ?? 'N/A' }}</a></div>
         </div>
     </div>
 
