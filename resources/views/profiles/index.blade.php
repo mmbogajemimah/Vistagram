@@ -7,7 +7,10 @@
             <img src="/svg/Logo.svg" style="height: 150px;" class="rounded-circle"alt="">
         </div>
         <div class="col-9 pt-5">
-            <div><h1>{{ $user->username }}</h1></div>
+            <div class='d-flex justify-content-between align-items-baseline'>
+                <h1>{{ $user->username }}</h1>
+                <a href="#">Add New Post</a>
+            </div>
             <div class="d-flex">
                 <div class=""><strong>153</strong> posts</div>
                 <div class="ps-4"><strong>23k</strong> followers</div>
