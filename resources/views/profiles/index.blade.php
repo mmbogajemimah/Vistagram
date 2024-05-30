@@ -7,14 +7,20 @@
             <img src="{{ $user->profile->profileImage() }}" style="height: 150px; width: 150px" class="rounded-circle"alt="">
         </div>
         <div class="col-9 pt-5">
-            <div class='d-flex justify-content-between align-items-baseline'>
-                <h1>{{ $user->username }}</h1>
+            <div class="d-flex justify-content-between align-items-baseline mb-4">
+                <div class="d-flex align-items-center">
+                    <h4 class="mb-0">{{ $user->username }}</h4>
+                    <follow-button user-id="{{ $user->id }}"></follow-button>
+                </div>
                 @can ('update', $user->profile)
-                    <a href="/p/create">Add New Post</a>
+                    <a href="/p/create" class="btn btn-outline-secondary">Add New Post</a>
                 @endcan
             </div>
+            
             @can ('update', $user->profile)
-                <a href="/profile/{{ $user->id }}/edit">Edit Profile</a>
+                <div class="d-flex justify-content-end">
+                    <a href="/profile/{{ $user->id }}/edit" class="btn btn-outline-primary">Edit Profile</a>
+                </div>
             @endcan
             
             <div class="d-flex">
