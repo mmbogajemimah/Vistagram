@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5" >
-            <img src="/svg/Logo.svg" style="height: 150px;" class="rounded-circle"alt="">
+            <img src="{{ $user->profile->profileImage() }}" style="height: 150px; width: 150px" class="rounded-circle"alt="">
         </div>
         <div class="col-9 pt-5">
             <div class='d-flex justify-content-between align-items-baseline'>
