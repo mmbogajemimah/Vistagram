@@ -15,6 +15,7 @@ class PostsController extends Controller
     }
     public function create()
     {
+        // dd('Create method hit');
         return view('posts.create');
     }
 
@@ -38,7 +39,7 @@ class PostsController extends Controller
         return redirect('/profile/' .auth()->user()->id);
     }
 
-    public function show( \App\Models\Post $post)
+    public function show( Post $post)
     {
         return view('posts.show', compact('post'));
     }
