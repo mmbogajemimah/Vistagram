@@ -13,6 +13,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::post('follow/{user}', [FollowsController::class, 'store']);
+// Route::post('follow/{user}', function() {
+//     return ['success'];
+// });
 
 Route::get('/p/create', [PostsController::class, 'create'])->name('posts.create');
 Route::post('/p', [PostsController::class, 'store'])->name('posts.store');
